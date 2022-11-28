@@ -1,0 +1,43 @@
+.ball {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background-color: purple;
+    border-radius: 50%;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(218, 218, 218);
+    font-family: 'Roboto', sans-serif;
+}
+
+.player1, .player2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100px;
+    width: 10px;
+    background-color: orange;
+}
+
+.counter1, .counter2 {
+    position: absolute;
+    top: 50px;
+    font-size: 40px;
+    left: 10px;
+}
+
+.counter2{
+    left: calc(100vw - 30px);
+}
