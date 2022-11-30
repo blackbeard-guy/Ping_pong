@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
     ball.style.left = x + 'px'
     ball.style.top = y + 'px'
 
-    player1_y = H/2 - 75 
-    player2_y = H/2 - 75 
+    player1_y = H/2 - 50 
+    player2_y = H/2 - 50 
     player1.style.top = player1_y + 'px'
     player2.style.top = player2_y + 'px'
     player2.style.left = W - 10 + 'px'
@@ -66,8 +66,8 @@ function move() {
     x += xspeed
     y += yspeed
 
-    if((x < 20 && (y > player1_y && y < player1_y + 150)) || 
-    (x + 10 > W - 20 && (y > player2_y && y < player2_y + 150))) {
+    if((x < 20 && (y > player1_y && y < player1_y + 100)) || 
+    (x + 10 > W - 20 && (y > player2_y && y < player2_y + 100))) {
         xspeed *= -1
         yspeed += 1
         yspeed *= -1
@@ -76,13 +76,13 @@ function move() {
     if(x < 0) loose(1)
     if(x > W - 10) loose(2)
 
-    if(y < 0 || y > W - 20) yspeed *= -1
+    if(y < 0 || y > H - 20) yspeed *= -1
 
-    if (player1_y < 0 || player1_y > H - 150) {
+    if (player1_y < 0 || player1_y > H - 100) {
         player1_speed *= -1
     }
     
-    if (player2_y < 0 || player2_y > H - 150) {
+    if (player2_y < 0 || player2_y > H - 100) {
         player2_speed *= -1
     }
 
